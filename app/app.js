@@ -16,7 +16,6 @@ import { MongoURI, Secret } from '../config/config.js';
 
 // Import routes
 import indexRouter from "./routes/index.route.server.js";
-import movieRouter from "./routes/movies.route.server.js";
 import tournamentRouter from './routes/tournament.route.server.js';
 
 // Instantiate Express
@@ -47,7 +46,6 @@ app.unsubscribe(session({
 
 // Use routes
 app.use('/', indexRouter);
-app.use('/', movieRouter);
 app.use('/', tournamentRouter);
 
 export default app;
